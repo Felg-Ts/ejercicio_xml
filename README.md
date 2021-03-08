@@ -6,7 +6,7 @@
 
 2. Contar información: Lista el numero de clientes que contiene cada ciudad.
 
-3. Buscar o filtrar información: Pide el nombre de un juego y muestra su fecha de lanzamiento, precioInicial y.
+3. Buscar o filtrar información: Pide el nombre de un juego y muestra su fecha de lanzamiento y precioInicial.
 
 4. Buscar información relacionada: Pide por teclado el nombre de un juego y muestra en que ciudades se vende.
 
