@@ -126,3 +126,70 @@ def searhinfore(root):
     print("Presione una tecla para continuar...")
     msvcrt.getch()
     os.system('clear')
+
+def searhichamabil(root):
+
+    print('''
+    1-Granada
+    2-Barcelona
+    ''')
+
+    nc = input("Introduce el nombre de una ciudad: ")
+
+    if nc == 'Granada':
+        for x1 in root.findall("./tiendas[1]/clientes/nombre"):
+            print(x1.text)
+
+    
+        cll1 = root.find("./tiendas[1]/clientes[1]/nombre")
+        cll2 = root.find("./tiendas[1]/clientes[2]/nombre")
+        cll3 = root.find("./tiendas[1]/clientes[3]/nombre")
+        cll4 = root.find("./tiendas[1]/clientes[4]/nombre")
+
+        cl1 = input("Dime el nombre de un cliente: ")
+
+        if cl1 == cll1.text:
+            n1 = root.find("./tiendas[1]/clientes[1]/nombre")
+            c1 = root.find("./tiendas[1]/ciudad")
+            g1 = root.find("./tiendas[1]/clientes[1]/videojuegosComprados[1]/nombreVideojuego")
+            g2 = root.find("./tiendas[1]/clientes[1]/videojuegosComprados[2]/nombreVideojuego")
+            print(f"El cliente {n1.text} de la ciudad {c1.text} tiene los videojuegos: {g1.text} y {g2.text}")
+        elif cl1 == cll2.text:
+            n1 = root.find("./tiendas[1]/clientes[2]/nombre")
+            c1 = root.find("./tiendas[1]/ciudad")
+            g1 = root.find("./tiendas[1]/clientes[2]/videojuegosComprados[1]/nombreVideojuego")
+            print(f"El cliente {n1.text} de la ciudad {c1.text} tiene los videojuegos: {g1.text}")
+        elif cl1 == cll3.text:
+            n1 = root.find("./tiendas[1]/clientes[3]/nombre")
+            c1 = root.find("./tiendas[1]/ciudad")
+            g1 = root.find("./tiendas[1]/clientes[3]/videojuegosComprados[1]/nombreVideojuego")
+            print(f"El cliente {n1.text} de la ciudad {c1.text} tiene los videojuegos: {g1.text}")
+        elif cl1 == cll4.text:
+            n1 = root.find("./tiendas[1]/clientes[4]/nombre")
+            c1 = root.find("./tiendas[1]/ciudad")
+            g1 = root.find("./tiendas[1]/clientes[4]/videojuegosComprados[1]/nombreVideojuego")
+            g2 = root.find("./tiendas[1]/clientes[4]/videojuegosComprados[2]/nombreVideojuego")
+            print(f"El cliente {n1.text} de la ciudad {c1.text} tiene los videojuegos: {g1.text} y {g2.text}")
+
+        print("Presione una tecla para continuar...")
+        msvcrt.getch()
+        os.system('clear')
+
+    elif nc == 'Barcelona':
+        for x2 in root.findall("./tiendas[2]/clientes/nombre"):
+            print(x2.text)
+
+        cll1 = root.find("./tiendas[2]/clientes[1]/nombre")
+
+        cl1 = input("Dime el nombre de un cliente: ")
+
+        if cl1 == cll1.text:
+            n1 = root.find("./tiendas[2]/clientes[1]/nombre")
+            c1 = root.find("./tiendas[2]/ciudad")
+            g1 = root.find("./tiendas[2]/clientes[1]/videojuegosComprados[1]/nombreVideojuego")
+            g2 = root.find("./tiendas[2]/clientes[1]/videojuegosComprados[2]/nombreVideojuego")
+            print(f"El cliente {n1.text} de la ciudad {c1.text} tiene los videojuegos: {g1.text} y {g2.text}")
+
+        print("Presione una tecla para continuar...")
+        msvcrt.getch()
+        os.system('cl')
