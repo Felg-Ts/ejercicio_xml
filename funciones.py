@@ -81,3 +81,48 @@ def searhinfo(root):
     print("Presione una tecla para continuar...")
     msvcrt.getch()
     os.system('clear')
+
+def searhinfore(root):
+
+    print('''
+    1-FIFA
+    2-COD
+    3-FORTNITE
+    4-LOL
+    5-OVERWATCH
+    6-GTA
+    ''')
+
+    ngame = input("Introduce el nombre de un juego: ")
+
+    if ngame == 'FIFA':
+        NG1 = root.find("./tiendas/videojuegos[1]/nombreVideojuego")
+        C1 = root.find("./tiendas[1]/ciudad")
+        C2 = root.find("./tiendas[2]/ciudad")
+        print(f'El videojuego {NG1.text} se vende en: {C1.text} y {C2.text}.')
+    elif ngame == 'COD':
+        NG1 = root.find("./tiendas/videojuegos[4]/nombreVideojuego")
+        C1 = root.find("./tiendas[1]/ciudad")
+        C2 = root.find("./tiendas[2]/ciudad")
+        print(f'El videojuego {NG1.text} se vende en: {C1.text} y {C2.text}.')
+    elif ngame == 'FORTNITE':
+        NG1 = root.find("./tiendas/videojuegos[5]/nombreVideojuego")
+        C1 = root.find("./tiendas[1]/ciudad")
+        print(f'El videojuego {NG1.text} se vende en: {C1.text}.')
+    elif ngame == 'LOL':
+        NG1 = root.find("./tiendas/videojuegos[6]/nombreVideojuego")
+        C1 = root.find("./tiendas[1]/ciudad")
+        print(f'El videojuego {NG1.text} se vende en: {C1.text}.')
+    elif ngame == 'OVERWATCH':
+        NG1 = root.find("./tiendas/videojuegos[7]/nombreVideojuego")
+        C1 = root.find("./tiendas[1]/ciudad")
+        print(f'El videojuego {NG1.text} se vende en: {C1.text}.')
+    elif ngame == 'GTA':
+        NG1 = root.find("./tiendas/videojuegos[8]/nombreVideojuego")
+        C1 = root.find("./tiendas[1]/ciudad")
+        C2 = root.find("./tiendas[2]/ciudad")
+        print(f'El videojuego {NG1.text} se vende en: {C1.text} y {C2.text}.')
+
+    print("Presione una tecla para continuar...")
+    msvcrt.getch()
+    os.system('clear')
